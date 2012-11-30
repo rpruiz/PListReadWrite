@@ -12,9 +12,9 @@ module PListRW
   # Returns either True or False
   def self.exist?(fileName, directory = :documentsDir)
     case directory.to_sym
-    when :documents
+    when :documentsDir
       File.exist?(plistPath(fileName))
-    when :bundle
+    when :mainBundle
       NSBundle.mainBundle.pathForResource(fileName, ofType: "plist")
     else
       raise ArgumentError, "directory must be one of :documentsDir or :mainBundle (was #{directory})"
