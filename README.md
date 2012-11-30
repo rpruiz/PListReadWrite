@@ -21,16 +21,20 @@ Lets assume we have this plist file in our resources directory...
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>name</key>
-    <string>Jim</string>
-    <key>email</key>
-    <string>jim@jimsemail.com</string>
-  </dict>
-  <dict>
-    <key>name</key>
-    <string>Jane</string>
-    <key>email</key>
-    <string>jane@janesemail.com</string>
+    <key>jim</key>
+    <dict>
+      <key>name</key>
+      <string>Jim</string>
+      <key>email</key>
+      <string>jim@jimsemail.com</string>
+    </dict>
+    <key>jane</key>
+    <dict>
+      <key>name</key>
+      <string>Jane</string>
+      <key>email</key>
+      <string>jane@janesemail.com</string>
+    </dict>
   </dict>
 </plist>
 ```
@@ -52,7 +56,7 @@ PListRW.copyPlistFileFromBundle(:users)
 @users_hash = PListRW.plistObject(:users, Hash) # => A hash containing the User data
 
 # Update the data
-@users_hash[:jim] # => { id: 123, name: "Jim", email: "jim@jimsemail.com" }
+@users_hash[:jim] # => { name: "Jim", email: "jim@jimsemail.com" }
 @users_hash[:jim][:name] = 'James'
 
 # Store the data back in the plist
