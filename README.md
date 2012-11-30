@@ -8,7 +8,7 @@ When I'm creating Ruby modules to share across more than one app I prefer to ins
 That way if I need to update/patch I only need to update once, not in every app!
 
     # From your project root dir
-    git submodule add git@github.com:Bodacious/PListRW.git lib/plist_rw.rb
+    git submodule add git@github.com:Bodacious/PListReadWrite.git lib/plist_rw
     
 Alternatively you can just copy/paste the file directly to your app.
 
