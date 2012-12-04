@@ -1,4 +1,4 @@
-# PListRW
+# PListReadWrite
 
 A Rubymotion module to make light work of writing to and reading from plist files.
 
@@ -44,10 +44,10 @@ Lets assume we have this plist file in our resources directory...
 ``` ruby
 
 # Check if the plist exists in our documents dir
-PListRW.exist?(:users, directory = :documentsDir) # => false
+PListRW.exist?(:users, :documentsDir) # => false
 
 # Check if the plist exists in our main bundle
-PListRW.exist?(:users, directory = :mainBundle) # => true
+PListRW.exist?(:users, :mainBundle) # => true
 
 # Copy the plist file from the main bundle to the documents dir
 PListRW.copyPlistFileFromBundle(:users)
